@@ -62,7 +62,7 @@ class AthleteTest {
 
 
     @Test
-    @DisplayName("Uma exceção deve ser lançada quando o atleta já estiver resgitrado")
+    @DisplayName("Uma exceção deve ser lançada quando o atleta já estiver registrado")
     void throw_exception_when_athlete_already_exists() {
 
         when(repository.existsByRegistrationNumber(any()))
