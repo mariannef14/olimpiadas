@@ -1,0 +1,70 @@
+databaseChangeLog:
+  - changeSet:
+      id: 20240727_create_table_athlete
+      author: Marianne Félix
+      changes:
+        - createTable:
+            tableName: athlete
+            columns:
+              - column:
+                  name: id
+                  type: uuid
+                  defaultValue: gen_random_uuid()
+                  remarks: Identificador único do atleta
+                  constraints:
+                    primaryKey: true
+                    nullable:  false
+              - column:
+                  name: name
+                  type: varchar(150)
+                  remarks: Nome do atleta
+                  constraints:
+                    nullable: false
+              - column:
+                  name: age
+                  type: integer
+                  remarks: Idade do atleta
+                  constraints:
+                    nullable: false
+              - column:
+                  name: dateOfBirth
+                  type: date
+                  remarks: Data de nascimento do atleta
+                  constraints:
+                    nullable: false
+              - column:
+                  name: sex
+                  type: char
+                  remarks: Sexo do atleta
+                  constraints:
+                    nullable: false
+              - column:
+                  name: modality_id
+                  type: uuid
+                  remarks: ID que faz referência a modalidade do atleta
+                  constraints:
+                    nullable: false
+                    foreignKeyName: modality_id_fk
+                    referencedTableName: modality
+                    referencedColumnNames: id
+              - column:
+                  name: totalMedals
+                  type: integer
+                  remarks: Total de medalhas conquistadas pelo atleta
+                  defaultValueNumeric: 0
+                  constraints:
+                    nullable: false
+              - column:
+                  name: created_at
+                  type: timestamp
+                  defaultValue: clock_timestamp()
+                  remarks: Data em que o contato foi criado
+                  constraints:
+                    nullable: false
+              - column:
+                  name: updated_at
+                  type: timestamp
+                  defaultValue: clock_timestamp()
+                  remarks: Data em que o contato foi atualizado
+                  constraints:
+                    nullable: false

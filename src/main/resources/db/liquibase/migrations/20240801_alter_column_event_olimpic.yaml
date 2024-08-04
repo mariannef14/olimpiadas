@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      id: 20240801_alter_column_evet_olimpic
+      author: Marianne Félix
+      changes:
+        - renameColumn:
+            columnDataType: uuid
+            newColumnName: event_id
+            oldColumnName: event
+            tableName: olimpic

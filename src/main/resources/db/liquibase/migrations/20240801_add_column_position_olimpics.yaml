@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - changeSet:
+      id: 20240801_add_column_position_olympics
+      author: Marianne Félix
+      changes:
+        - addColumn:
+            tableName: olimpic
+            columns:
+            - column:
+                name: position
+                type: integer
+                remarks: Posição final do atleta na competição
+                constraints:
+                  nullable: false

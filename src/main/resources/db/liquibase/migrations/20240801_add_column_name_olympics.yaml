@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - changeSet:
+      id: 20240801_add_column_name_olympics
+      author: Marianne Félix
+      changes:
+        - addColumn:
+            tableName: olympics
+            columns:
+            - column:
+                name: name
+                type: varchar(50)
+                remarks: Local onde a competição foi realizada
+                constraints:
+                  nullable: false

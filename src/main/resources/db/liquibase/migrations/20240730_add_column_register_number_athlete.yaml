@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - changeSet:
+      id: 20240730_add_column_registration_number_athlete
+      author: Marianne Félix
+      changes:
+        - addColumn:
+            tableName: athlete
+            columns:
+            - column:
+                name: registration_number
+                type: int
+                remarks: Número de registro do atleta
+                startWith: 1
+                autoIncrement: true
+                constraints:
+                  nullable: false

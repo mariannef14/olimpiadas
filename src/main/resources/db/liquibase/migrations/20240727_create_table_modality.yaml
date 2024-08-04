@@ -1,0 +1,42 @@
+databaseChangeLog:
+  - changeSet:
+      id: 20240727_create_table_modality
+      author: Marianne Félix
+      changes:
+        - createTable:
+            tableName: modality
+            columns:
+              - column:
+                  name: id
+                  type: uuid
+                  defaultValue: gen_random_uuid()
+                  remarks: Identificador único da modalidade
+                  constraints:
+                    primaryKey: true
+                    nullable:  false
+              - column:
+                  name: name
+                  type: varchar(150)
+                  remarks: Nome da modalidade
+                  constraints:
+                    nullable: false
+              - column:
+                  name: event
+                  type: varchar(100)
+                  remarks: Evento que corresponde a modalidade
+                  constraints:
+                    nullable: false
+              - column:
+                  name: created_at
+                  type: timestamp
+                  defaultValue: clock_timestamp()
+                  remarks: Data em que o contato foi criado
+                  constraints:
+                    nullable: false
+              - column:
+                  name: updated_at
+                  type: timestamp
+                  defaultValue: clock_timestamp()
+                  remarks: Data em que o contato foi atualizado
+                  constraints:
+                    nullable: false

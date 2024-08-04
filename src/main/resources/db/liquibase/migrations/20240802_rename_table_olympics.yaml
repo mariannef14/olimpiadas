@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: 20240802_rename_table_olympic
+      author: Marianne Félix
+      changes:
+      -  renameTable:
+           newTableName:  paris_olympic_games
+           oldTableName:  olympics

@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      id: 20240730_alter_column_event_modality
+      author: Marianne Félix
+      changes:
+        - renameColumn:
+            columnDataType: varchat(100)
+            newColumnName: event_type
+            oldColumnName: event
+            tableName: modality

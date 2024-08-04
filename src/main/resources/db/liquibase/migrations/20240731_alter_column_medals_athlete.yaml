@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      id: 20240731_alter_column_date_athlete
+      author: Marianne Félix
+      changes:
+        - renameColumn:
+            columnDataType: integer
+            newColumnName: total_medals
+            oldColumnName: totalMedals
+            tableName: athlete

@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - changeSet:
+      id: 20240801_add_column_date_participation_olympics
+      author: Marianne Félix
+      changes:
+        - addColumn:
+            tableName: olimpic
+            columns:
+            - column:
+                name: date_participation
+                type: date
+                remarks: Data da última participação do atleta na competição
+                constraints:
+                  nullable: false
