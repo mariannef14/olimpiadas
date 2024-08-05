@@ -23,6 +23,8 @@
 ##### ✨ Jogos 
  * posição na tabela / modalidade e evento;
 
+<br>
+
 ### 💡 Diagrama de Classes
 
 ```mermaid
